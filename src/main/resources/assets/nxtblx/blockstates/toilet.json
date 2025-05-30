@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "full=false,facing=north": {
+      "model": "nxtblx:block/toilet"
+    },
+    "full=false,facing=east": {
+      "model": "nxtblx:block/toilet",
+      "y": 90
+    },
+    "full=false,facing=south": {
+      "model": "nxtblx:block/toilet",
+      "y": 180
+    },
+    "full=false,facing=west": {
+      "model": "nxtblx:block/toilet",
+      "y": 270
+    },
+
+    "full=true,facing=north": {
+      "model": "nxtblx:block/toilet_full"
+    },
+    "full=true,facing=east": {
+      "model": "nxtblx:block/toilet_full",
+      "y": 90
+    },
+    "full=true,facing=south": {
+      "model": "nxtblx:block/toilet_full",
+      "y": 180
+    },
+    "full=true,facing=west": {
+      "model": "nxtblx:block/toilet_full",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "itemGroup.nxtblx": "Nextblocks Items",
+
+  "block.nxtblx.nextbase": "Nextbase",
+  "block.nxtblx.cinema": "Block of Absolute Cinema",
+  "block.nxtblx.toilet": "Toilet",
+
+  "item.nxtblx.nextpick": "Nextpick",
+  "item.nxtblx.nextfinder": "Nextfinder",
+  "item.nxtblx.sewage": "Sewage",
+
+  "entity.nxtblx.nextblock": "Nextblock",
+
+  "tooltip.nxtblx.prompt": "§eHold shift§7 to learn about this item!",
+  "tooltip.nxtblx.nextpick": "§7A mysterious item identical to an §egolden pickaxe§7, except for the fact that it can be sacrificed to mine a §dnextbase§7 or used on one to get a piece of random loot.)",
+  "tooltip.nxtblx.toilet": "§7When used, exchanges §6hunger§7 for §esaturation§7 and §2sewage§7.",
+  "tooltip.nxtblx.sewage": "§7The compostable output of a §ftoilet§7."
+}

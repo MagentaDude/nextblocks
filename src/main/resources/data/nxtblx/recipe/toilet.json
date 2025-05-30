@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CI ",
+    "CWC",
+    " C "
+  ],
+  "key": {
+    "C": [
+      "minecraft:clay_ball"
+    ],
+    "I": [
+      "minecraft:iron_ingot"
+    ],
+    "W": [
+      "minecraft:water_bucket"
+    ]
+  },
+  "result": {
+    "id": "nxtblx:toilet"
+  }
+}
