@@ -26,7 +26,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.List;
 import java.util.Optional;
 
-import static mod.nextblocks.Main.*;
+import static mod.nextblocks.Main.CINEMA;
+import static mod.nextblocks.Main.NEXTPICK;
 
 public class NextblockEntity extends Monster {
     private static final EntityDataAccessor<String> BLOCK =

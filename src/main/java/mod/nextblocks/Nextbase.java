@@ -1,6 +1,7 @@
 package mod.nextblocks;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -22,12 +23,17 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.common.world.chunk.TicketController;
 
 import java.util.List;
 
-import static mod.nextblocks.Main.*;
+import static mod.nextblocks.Main.NEXTBLOCK;
+import static mod.nextblocks.Main.NEXTPICK;
 
 public class Nextbase extends Block {
+    private static final TicketController ticketController =
+            new TicketController(ResourceLocation.parse("nxtblx:chunkloader"));
+
     public Nextbase(Properties properties) {
         super(properties);
     }
@@ -54,14 +60,6 @@ public class Nextbase extends Block {
     }
 
     @Override
-    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
-        super.onPlace(state, level, pos, oldState, movedByPiston);
-        if (!level.isClientSide) {
-            level.scheduleTick(pos, this, 0);
-        }
-    }
-
-    @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (level.getNearestPlayer(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                 32, true) != null && level
@@ -70,5 +68,13 @@ public class Nextbase extends Block {
             NEXTBLOCK.get().spawn(level, pos.above(), EntitySpawnReason.SPAWNER).randomBlock();
         }
         level.scheduleTick(pos, this, 200);
+    }
+
+    @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+        super.onPlace(state, level, pos, oldState, movedByPiston);
+        if (!level.isClientSide) {
+            level.scheduleTick(pos, this, 0);
+        }
     }
 }
